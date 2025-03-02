@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Inter';
   src: url('../font/Inter-Regular.woff') format('woff');
@@ -5,10 +6,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'InterBold';
+  src: url('../font/Inter-ExtraBold.woff') format('woff');
+  font-weight: 800; /* ExtraBold weight */
+  font-style: normal;
+}
+
 .font-inter {
   font-family: 'Inter', sans-serif;
 }
 
+
+
+.font-interBold {
+  font-family: 'InterBold', sans-serif;
+}
 body{
   font-family: 'Inter', sans-serif;
 }
@@ -24,4 +37,8 @@ body{
 
 .bluetext {
   color: #343C6A;
+}
+
+.lightbluetext {
+  color: #718EBF;
 }
