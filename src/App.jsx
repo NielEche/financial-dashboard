@@ -3,14 +3,14 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
-import './general.css'
+import './style/general.css'
 
 const App = () => {
   return (
     <Router>
       <div className="flex">
         <Sidebar />
-        <div className="flex-1">
+        <div className="flex-grow lg:ml-64">
           <Navbar />
           <Routes>
             <Route path="/" element={<Dashboard />} />
