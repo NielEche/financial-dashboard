@@ -34,7 +34,7 @@ const Navbar = () => {
       <div>
         <div className="flex justify-between items-center bg-white  lg:hidden px-6 py-4">
           <button 
-              className="lg:hidden fixed top-4 left-4 z-20 p-2 rounded-md"
+              className="lg:hidden top-4 left-4 z-20 p-2 rounded-md"
               onClick={toggleSidebar}>
               <svg 
                 className="w-6 h-6" 
