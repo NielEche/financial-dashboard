@@ -18,7 +18,7 @@ const Dashboard = () => {
                 </div>
             </div>    
 
-            <div className='lg:flex px-8 '>
+            <div className='lg:flex lg:px-8 '>
                 <div className="lg:w-2/3 pt-6 px-4">
                     <Activity />
                 </div>
@@ -27,7 +27,7 @@ const Dashboard = () => {
                 </div>  
             </div>  
 
-            <div className='lg:flex px-8 pb-10'>
+            <div className='lg:flex lg:px-8 pb-10'>
                 <div className="lg:w-2/5 pt-6 px-4">
                     <QuickTransfer />
                 </div>

@@ -10,8 +10,12 @@ const QuickTransfer = () => {
     const contacts = [
         { id: 1, name: 'Livia Bator', role: 'CEO', profilePic: '/user.png' },
         { id: 2, name: 'Randy Press', role: 'Director', profilePic: '/user1.png' },
-        { id: 3, name: 'Alice Johnson', role: 'Family', profilePic: '/user3.png' },
+        { id: 3, name: 'Workman', role: 'Designer', profilePic: '/user3.png' },
         { id: 4, name: 'Bob Brown', role: 'Friend', profilePic: '/user1.png' },
+        { id: 5, name: 'Randy Press', role: 'Director', profilePic: '/user1.png' },
+        { id: 6, name: 'Workman', role: 'Designer', profilePic: '/user3.png' },
+        { id: 7, name: 'Bob Brown', role: 'Friend', profilePic: '/user1.png' },
+
     ];
 
     const handleAmountChange = (e) => {
@@ -23,7 +27,9 @@ const QuickTransfer = () => {
     };
 
     const handleSend = () => {
-        if (selectedContact) {
+        if (!amount) {
+            alert('Please enter an amount to send.');
+        } else if (selectedContact) {
             alert(`Sending $${amount} to ${selectedContact.name}`);
             setAmount(''); 
             setSelectedContact(null); 
@@ -51,57 +57,62 @@ const QuickTransfer = () => {
 
     return (
         <>
-            <h2 className="text-xl font-bold mb-4">Quick Transfer</h2>
-            <div className="bg-white shadow-md rounded-lg p-4">     
-                <div className="mb-4 flex items-center justify-between">
+            <h2 className="text-xl font-bold mb-4 bluetext">Quick Transfer</h2>
+            <div className="bg-white shadow-md rounded-4xl p-4">     
+                <div className="py-4 flex items-center justify-center">
                     {showPrev && ( // Conditionally render the Previous button
                     <a 
-                        className=" text-white mx-2 w-1/6"
+                        className=" text-white w-20 flex justify-center cursor-pointer"
                         onClick={handlePrev}>
-                        <img src="/prev.png" alt="Next" className="inline-block w-[50px] h-[50px]" />
+                        <img src="/prev.png" alt="Previous" className="inline-block w-[50px] h-[50px]" />
                         </a>
                     )}
-                    <div className=" flex overflow-x-auto" ref={contactListRef}>
+                    <div className="flex overflow-hidden" ref={contactListRef} style={{ width: '300px' }}>
                         <div className="flex">
-                            {contacts.map(contact => (
+                            {contacts.map((contact) => (
                                 <div
                                     key={contact.id}
-                                    className={`p-2 w-30 cursor-pointer ${selectedContact?.id === contact.id ? 'bg-gray-200' : ''}`}
+                                    className={`p-2 w-35 cursor-pointer ${selectedContact?.id === contact.id ? ' rounded-2xl font-interBold ' : ''}`}
                                     onClick={() => handleContactSelect(contact)}>
                                     <img
                                         src={contact.profilePic}
                                         alt={contact.name}
                                         className="w-[70px] h-[70px] rounded-full mx-auto"/>
                                     <div className="text-center">
-                                        <p className="font-semibold text-base">{contact.name}</p>
-                                        <p className="text-sm text-gray-500">{contact.role}</p>
+                                        <p>{contact.name}</p>
+                                        <p className="text-sm lightbluetext">{contact.role}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                     <a 
-                        className=" text-white mx-2 w-1/6"
+                        className=" text-white w-20 flex justify-center cursor-pointer"
                         onClick={handleNext}>
-                        <img src="/next.png" alt="Next" className="inline-block w-[50px] h-[50px] mr-1" />
+                        <img src="/next.png" alt="Next" className="inline-block w-[50px] h-[50px] " />
                     </a>
                 </div>
 
-                <div className='mb-4'>
-                    <label className="block mb-1">Write Amount</label>
-                    <input
-                        type="number"
-                        value={amount}
-                        onChange={handleAmountChange}
-                        placeholder="Enter amount"
-                        className="border rounded p-2 w-full"
-                    />
+                <div className='flex py-4 items-center justify-between'>
+                    <label className="block mb-1 text-sm lightbluetext">Write Amount</label>
+                    <div className=' flex'>
+                        <input
+                            type="number"
+                            value={amount}
+                            onChange={handleAmountChange}
+                            placeholder="Enter amount"
+                            className="bg-gray-100 rounded-l-4xl py-2 px-6 lightbluetext lg:w-40 w-50 focus:outline-none focus:ring-0"
+                            min="0" // Ensures only positive amounts can be entered
+                            step="0.01" // Allows for decimal values
+                        />
+                        <button
+                            onClick={handleSend}
+                            className="bg-gray-900 text-white rounded-l-4xl rounded-r-4xl pl-6 py-4 flex items-center -ml-6 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-700">
+                            Send
+                            <img src="/arrow.png" alt="Arrow" className="inline-block w-6 h-6 ml-2 mr-8" />
+                        </button>
+                    </div>
                 </div>
-                <button
-                    onClick={handleSend}
-                    className="bg-blue-500 text-white rounded px-4 py-2">
-                    Send
-                </button>
             </div>
         </>
     );

@@ -10,7 +10,7 @@ const App = () => {
     <Router>
       <div className="flex">
         <Sidebar />
-        <div className="flex-grow lg:ml-64">
+        <div className="lg:flex-grow flex-1 lg:ml-64">
           <Navbar />
           <Routes>
             <Route path="/" element={<Dashboard />} />
