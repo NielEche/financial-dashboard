@@ -35,10 +35,9 @@ Context API is used for global state management.
 
 Tailwind CSS is used for styling.
 
-React Router will be used for navigation (if needed in future updates).
+React Router will be used for navigation.
 
 ESLint is configured to follow best practices.
-
 
 ## Technologies Used
 

@@ -1,0 +1,9 @@
+.editProfile input {
+    border: 1px solid #DFEAF2;
+    color: #718EBF;
+    text-decoration: none; /* Remove text decoration */
+}
+
+.editProfile input:focus {
+    outline: none; /* Remove focus outline */
+}

@@ -1,15 +1,15 @@
 import '../style/dashboard.css'
-import Cards from '../components/Cards';
-import Transactions from '../components/Transactions';
-import Activity from '../components/Activity';
-import ExpenseStatistics from '../components/ExpenseStatistics';
-import QuickTransfer from '../components/QuickTransfer'; 
-import BalanceHistory from '../components/BalanceHistory'; 
+import Cards from '../components/dashboard/Cards';
+import Transactions from '../components/dashboard/Transactions';
+import Activity from '../components/dashboard/Activity';
+import ExpenseStatistics from '../components/dashboard/ExpenseStatistics';
+import QuickTransfer from '../components/dashboard/QuickTransfer'; 
+import BalanceHistory from '../components/dashboard/BalanceHistory'; 
 
 const Dashboard = () => {
     return (
         <div className='lg:bg-gray-100'>
-            <div className='lg:flex px-8 '>
+             <div className='lg:flex lg:px-8 '>
                 <div className="lg:w-2/3 pt-6 px-4">
                     <Cards />
                 </div>
@@ -17,7 +17,7 @@ const Dashboard = () => {
                 <div className='px-4 lg:w-1/3  pt-6'>
                     <Transactions />
                 </div>
-            </div>    
+            </div>   
 
             <div className='lg:flex lg:px-8 '>
                 <div className="lg:w-2/3 pt-6 px-4">

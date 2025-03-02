@@ -67,7 +67,7 @@ const BalanceHistory = () => {
     return (
         <>
          <h2 className="text-xl font-bold mb-4 bluetext">Balance History</h2>
-        <div className="bg-white shadow-md rounded-4xl p-4 h-72">
+        <div className="bg-white shadow-md rounded-4xl p-4 lg:h-72">
             <Line ref={chartRef} data={data} options={options} />
         </div>
         </>
