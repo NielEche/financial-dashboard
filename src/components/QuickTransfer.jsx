@@ -62,7 +62,7 @@ const QuickTransfer = () => {
                 <div className="py-4 flex items-center justify-center">
                     {showPrev && ( // Conditionally render the Previous button
                     <a 
-                        className=" text-white w-20 flex justify-center cursor-pointer"
+                        className=" text-white w-15 flex justify-center cursor-pointer"
                         onClick={handlePrev}>
                         <img src="/prev.png" alt="Previous" className="inline-block w-[50px] h-[50px]" />
                         </a>
@@ -87,7 +87,7 @@ const QuickTransfer = () => {
                         </div>
                     </div>
                     <a 
-                        className=" text-white w-20 flex justify-center cursor-pointer"
+                        className=" text-white w-15 flex justify-center cursor-pointer"
                         onClick={handleNext}>
                         <img src="/next.png" alt="Next" className="inline-block w-[50px] h-[50px] " />
                     </a>

@@ -4,6 +4,7 @@ import Transactions from '../components/Transactions';
 import Activity from '../components/Activity';
 import ExpenseStatistics from '../components/ExpenseStatistics';
 import QuickTransfer from '../components/QuickTransfer'; 
+import BalanceHistory from '../components/BalanceHistory'; 
 
 const Dashboard = () => {
     return (
@@ -30,6 +31,9 @@ const Dashboard = () => {
             <div className='lg:flex lg:px-8 pb-10'>
                 <div className="lg:w-2/5 pt-6 px-4">
                     <QuickTransfer />
+                </div>
+                <div className="lg:w-3/5 pt-6 px-4">
+                    <BalanceHistory />
                 </div>
             </div>  
 
