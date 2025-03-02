@@ -56,18 +56,19 @@ const QuickTransfer = () => {
     };
 
     return (
-        <>
+        <div>
             <h2 className="text-xl font-bold mb-4 bluetext">Quick Transfer</h2>
-            <div className="bg-white shadow-md rounded-4xl p-4">     
+            <div className="bg-white shadow-md rounded-4xl p-4">    
+
                 <div className="py-4 flex items-center justify-center">
                     {showPrev && ( // Conditionally render the Previous button
                     <a 
-                        className=" text-white w-20 flex justify-center cursor-pointer"
+                        className=" text-white w-1/5 flex justify-center cursor-pointer"
                         onClick={handlePrev}>
                         <img src="/prev.png" alt="Previous" className="inline-block w-[50px] h-[50px]" />
                         </a>
                     )}
-                    <div className="flex overflow-hidden" ref={contactListRef} style={{ width: '300px' }}>
+                    <div className="flex overflow-auto w-[300px]" ref={contactListRef} >
                         <div className="flex">
                             {contacts.map((contact) => (
                                 <div
@@ -87,34 +88,35 @@ const QuickTransfer = () => {
                         </div>
                     </div>
                     <a 
-                        className=" text-white w-20 flex justify-center cursor-pointer"
+                        className="text-white w-1/5 flex justify-center cursor-pointer"
                         onClick={handleNext}>
-                        <img src="/next.png" alt="Next" className="inline-block w-[50px] h-[50px] " />
+                        <img src="/next.svg" alt="Next" className="inline-block w-[50px] h-[50px] " />
                     </a>
                 </div>
 
+
                 <div className='flex py-4 items-center justify-between'>
-                    <label className="block mb-1 text-sm lightbluetext">Write Amount</label>
+                    <label className="block lg:text-sm text-xs lightbluetext">Write Amount</label>
                     <div className=' flex'>
                         <input
                             type="number"
                             value={amount}
                             onChange={handleAmountChange}
                             placeholder="Enter amount"
-                            className="bg-gray-100 rounded-l-4xl py-2 px-6 lightbluetext lg:w-40 w-50 focus:outline-none focus:ring-0"
+                            className="bg-gray-100 rounded-l-4xl py-2 px-6 lightbluetext  w-40 focus:outline-none focus:ring-0"
                             min="0" // Ensures only positive amounts can be entered
                             step="0.01" // Allows for decimal values
                         />
                         <button
                             onClick={handleSend}
-                            className="bg-gray-900 text-white rounded-l-4xl rounded-r-4xl pl-6 py-4 flex items-center -ml-6 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-700">
+                            className="bg-gray-900 text-white rounded-4xl pl-6 py-4 flex items-center -ml-6 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-700">
                             Send
-                            <img src="/arrow.png" alt="Arrow" className="inline-block w-6 h-6 ml-2 mr-8" />
+                            <img src="/arrow.svg" alt="Arrow" className="inline-block w-6 h-6 ml-2 mr-8" />
                         </button>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

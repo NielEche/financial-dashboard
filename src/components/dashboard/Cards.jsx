@@ -6,6 +6,9 @@ const Cards = () => {
     const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
 
     useEffect(() => {
+        // Set the app element for accessibility
+        Modal.setAppElement('#root'); // Replace '#root' with the ID of your app's root element
+
         // Mocking API call to fetch card details
         const fetchCardDetails = async () => {
             // Simulating an API response
@@ -37,7 +40,7 @@ const Cards = () => {
             </button>
         </div>
 
-        <div className="mt-4 md:w-[700px] w-screen">
+        <div className="mt-4 md:w-[700px] w-[350px]">
             <div className="overflow-x-auto whitespace-nowrap">
                 {cards.map(card => (
                     <div key={card.id} className=" inline-block rounded-4xl border-1 border-gray-200 pt-6 m-2"
@@ -54,7 +57,7 @@ const Cards = () => {
                             </div>
                             <div>
                                 <img 
-                                    src={card.type === 'gold' ? "/WChip_Card.png" : "/BChip_Card.png"}
+                                    src={card.type === 'gold' ? "/WChip_Card.svg" : "/BChip_Card.svg"}
                                     alt="Chip" 
                                     className="mx-auto"
                                     width={35}
@@ -81,7 +84,7 @@ const Cards = () => {
                             </div>
                             <div>
                                 <img 
-                                    src={card.type === 'gold' ? "/Group17.png" : "/Group18.png"}
+                                    src={card.type === 'gold' ? "/Group17.svg" : "/Group18.svg"}
                                     alt="Logo" 
                                     className="mx-auto"
                                     width={44}
@@ -119,7 +122,7 @@ const Cards = () => {
                             </div>
                             <div>
                                 <img 
-                                    src={card.type === 'gold' ? "/WChip_Card.png" : "/BChip_Card.png"}
+                                    src={card.type === 'gold' ? "/WChip_Card.svg" : "/BChip_Card.svg"}
                                     alt="Chip" 
                                     className="mx-auto"
                                     width={35}
@@ -146,7 +149,7 @@ const Cards = () => {
                             </div>
                             <div>
                                 <img 
-                                    src={card.type === 'gold' ? "/Group17.png" : "/Group18.png"}
+                                    src={card.type === 'gold' ? "/Group17.svg" : "/Group18.svg"}
                                     alt="Logo" 
                                     className="mx-auto"
                                     width={44}
