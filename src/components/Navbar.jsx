@@ -12,7 +12,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-4 py-2 px-8">
           <div className="flex items-center bg-gray-100 rounded-3xl p-2">
-            <img src="/search-icon.png" alt="Search" className="w-5 h-5 ml-4" />
+            <img src="/search-icon.svg" alt="Search" className="w-5 h-5 ml-4" />
             <input 
               type="text" 
               placeholder="Search for something" 
@@ -20,10 +20,10 @@ const Navbar = () => {
             />
           </div>
           <a href="/settings">
-            <img src="/Group4.png" className="w-10 h-10" alt="settings" />
+            <img src="/Group4.svg" className="w-10 h-10" alt="settings" />
           </a>
           <a href="#">
-            <img src="/Group3.png" className="w-10 h-10" alt="settings" />
+            <img src="/Group3.svg" className="w-10 h-10" alt="settings" />
           </a>
           <a href="#">
             <img src="/profile.png" className="w-10 h-10" alt="Profile" />
@@ -34,7 +34,7 @@ const Navbar = () => {
       <div>
         <div className="flex justify-between items-center bg-white  lg:hidden px-6 py-4">
           <button 
-              className="lg:hidden fixed top-4 left-4 z-20 p-2 rounded-md"
+              className="lg:hidden top-4 left-4 z-20 p-2 rounded-md"
               onClick={toggleSidebar}>
               <svg 
                 className="w-6 h-6" 
@@ -55,7 +55,7 @@ const Navbar = () => {
           </a>
         </div>
           <div className="flex items-center bg-gray-100 rounded-3xl p-2 mx-6 lg:hidden">
-            <img src="/search-icon.png" alt="Search" className="w-5 h-5 ml-4" />
+            <img src="/search-icon.svg" alt="Search" className="w-5 h-5 ml-4" />
             <input 
               type="text" 
               placeholder="Search for something" 

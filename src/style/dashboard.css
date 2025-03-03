@@ -1,0 +1,33 @@
+.creditCard {
+    width: 350px;
+    height: 235px;
+}
+
+
+.text-Darkblue{
+    color: #343C6A;
+}
+
+
+.activity {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+div::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide number input spinners in Chrome, Safari, Edge, and Firefox */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
