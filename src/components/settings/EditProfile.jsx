@@ -122,7 +122,7 @@ const EditProfile = () => {
                     <img 
                         src={profilePicture || '/profile.png'} 
                         alt="Profile" 
-                        className="w-32 h-32 rounded-full" 
+                        className="w-32 h-32 rounded-full object-cover" 
                     />
                     <input
                         type="file"
