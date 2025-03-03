@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import './style/general.css'
+import Dashboard from "./pages/Dashboard";
+import Settings from "./pages/Settings";
 
 // Lazy load the Dashboard and Settings pages
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -18,7 +20,7 @@ const App = () => {
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/Settings" element={<Settings />} />
+              <Route path="/settings" element={<Settings />} />
             </Routes>
           </Suspense>
         </div>
