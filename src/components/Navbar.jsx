@@ -25,7 +25,7 @@ const Navbar = () => {
           <a href="#">
             <img src="/Group3.svg" className="w-10 h-10" alt="settings" />
           </a>
-          <a href="#">
+          <a href="/settings">
             <img src="/profile.png" className="w-10 h-10" alt="Profile" />
           </a>
         </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
               </svg>
           </button>
           <h1 className="bluetext text-2xl font-bold py-2 px-4 flex-grow text-center">{window.location.pathname === '/settings' ? 'Settings' : 'Overview'}</h1>
-          <a href="#">
+          <a href="/settings">
             <img src="/profile.png" className="w-10 h-10" alt="Profile" />
           </a>
         </div>
