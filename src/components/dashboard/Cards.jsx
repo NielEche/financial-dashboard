@@ -42,6 +42,7 @@ const Cards = () => {
 
         <div className="mt-4 md:w-[700px] w-[350px]">
             <div className="overflow-x-auto whitespace-nowrap">
+                 {/*My cards*/}
                 {cards.map(card => (
                     <div key={card.id} className=" inline-block rounded-4xl border-1 border-gray-200 pt-6 m-2"
                         style={{

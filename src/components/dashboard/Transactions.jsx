@@ -25,6 +25,7 @@ const Transactions = () => {
             <h2 className="text-xl font-bold mb-4 bluetext">Recent Transactions</h2>
             <div className='bg-white shadow-md rounded-4xl p-6 overflow-hidden'>
                 <div className='overflow-auto h-52'>
+                     {/* all transactions */}
                     {transactions.map(transaction => (
                         <div key={transaction.id} className="flex justify-between py-2  transition-transform transform hover:scale-95 hover:drop-shadow-md ">
                             <div className="flex items-center">
