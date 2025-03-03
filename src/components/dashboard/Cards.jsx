@@ -107,7 +107,7 @@ const Cards = () => {
             overlayClassName="fixed inset-0 bg-gray-200 pt-10 px-6 z-[1000]">
             <h2 className="text-xl font-bold p-6">All Cards</h2>
             <button onClick={closeModal} className="absolute top-2 right-2 p-6 cursor-pointer">Close</button>
-            <div className="overflow-auto h-9/10 flex flex-wrap">
+            <div className="overflow-scroll flex-wrap lg:flex h-[500px] lg:h-full">
             {cards.map(card => (
                     <div key={card.id} className=" inline-block rounded-4xl border-1 border-gray-200 pt-6 m-2"
                         style={{
