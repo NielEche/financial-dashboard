@@ -39,6 +39,7 @@ const Activity = () => {
         <>
         <h2 className="text-xl font-bold mb-4 bluetext">Weekly Activity </h2>
         <div className="bg-white shadow-md p-4 rounded-4xl">
+              {/* weekly activity bar */}
             <Bar data={data} options={{ 
                 ...options, 
                 plugins: { 
