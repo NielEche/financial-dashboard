@@ -14,12 +14,12 @@ const App = () => {
         <Sidebar />
         <div className="lg:flex-grow lg:bg-gray-100 flex-1 lg:ml-64">
           <Navbar />
-          <Suspense fallback={<div>Loading...</div>}>
+         
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/settings" element={<Settings />} />
+              <Route path="/Settings" element={<Settings />} />
             </Routes>
-          </Suspense>
+         
         </div>
       </div>
     </Router>
