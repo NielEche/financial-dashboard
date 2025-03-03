@@ -16,7 +16,7 @@ const Sidebar = () => {
       `}>
           <div className="pb-10 pt-2">
             <img 
-              src="/Logo.png"
+              src="/Logo.svg"
               alt="Logo" 
               className="mx-auto"
               width={167}
