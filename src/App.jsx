@@ -18,7 +18,7 @@ const App = () => {
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/settings" element={<Settings />} />
+              <Route path="/Settings" element={<Settings />} />
             </Routes>
           </Suspense>
         </div>

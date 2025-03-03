@@ -46,8 +46,8 @@ const Cards = () => {
                     <div key={card.id} className=" inline-block rounded-4xl border-1 border-gray-200 pt-6 m-2"
                         style={{
                             backgroundImage: card.type === 'gold' 
-                                ? "url('/RectangleBG.png')" 
-                                : "url('/RectangleW.png')",
+                                ? "url('/RectangleBG.svg')" 
+                                : "url('/RectangleW.svg')",
                             backgroundSize: 'cover'
                         }}>
                         <div className={`flex justify-between px-8 ${card.type === 'gold' ? 'text-white' : 'text-Darkblue'}`}>
@@ -111,8 +111,8 @@ const Cards = () => {
                     <div key={card.id} className=" inline-block rounded-4xl border-1 border-gray-200 pt-6 m-2"
                         style={{
                             backgroundImage: card.type === 'gold' 
-                                ? "url('/RectangleBG.png')" 
-                                : "url('/RectangleW.png')",
+                                ? "url('/RectangleBG.svg')" 
+                                : "url('/RectangleW.svg')",
                             backgroundSize: 'cover'
                         }}>
                         <div className={`flex justify-between px-8 ${card.type === 'gold' ? 'text-white' : 'text-Darkblue'}`}>
